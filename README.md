@@ -50,3 +50,68 @@ BLOG_DIR=src/content/blog
 GIT_USER_NAME=GitPress Bot
 GIT_USER_EMAIL=bot@example.com
 GIT_AUTH_TOKEN=ghp_xxx
+```
+
+---
+
+## 🚀 Getting Started
+
+### Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/kasunben/GitPress.git
+   cd GitPress
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file (copy from `.env.example`):
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Configure your `.env` file with your repository details:
+   - `GIT_REPO_URL`: Your GitHub repository URL
+   - `GIT_AUTH_TOKEN`: GitHub personal access token with repo permissions
+   - `BLOG_DIR`: Path to your markdown files within the repo
+   - Other settings as needed
+
+### Running GitPress
+
+Start the server:
+```bash
+npm start
+```
+
+Open your browser and navigate to:
+```
+http://localhost:3333
+```
+
+---
+
+## 📖 Usage
+
+1. **Create a Post**: Click the "+ New Post" button, enter a filename and content, then save.
+2. **Edit a Post**: Click on any post or use the "Edit" button to modify its content.
+3. **Delete a Post**: Click the "Delete" button next to any post.
+4. **Publish Changes**: Click the "🚀 Publish Changes" button to commit and push all changes to your Git repository.
+
+---
+
+## 🏗️ Architecture
+
+- **Backend**: Node.js with Express
+- **Git Operations**: simple-git library
+- **Frontend**: Vanilla JavaScript, HTML, CSS
+- **Storage**: Local `data/` directory (Git-backed)
+
+---
+
+## 📝 License
+
+MIT

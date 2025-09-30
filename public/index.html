@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitPress - Markdown CMS</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 GitPress</h1>
+            <p>Minimal Git-backed Markdown CMS</p>
+        </header>
+
+        <div class="toolbar">
+            <button id="newPostBtn" class="btn btn-primary">+ New Post</button>
+            <button id="publishBtn" class="btn btn-success">🚀 Publish Changes</button>
+            <button id="refreshBtn" class="btn">🔄 Refresh</button>
+        </div>
+
+        <div id="postList" class="post-list">
+            <p class="loading">Loading posts...</p>
+        </div>
+
+        <div id="editor" class="editor hidden">
+            <div class="editor-header">
+                <input type="text" id="filenameInput" placeholder="filename.md" class="filename-input">
+                <div class="editor-actions">
+                    <button id="saveBtn" class="btn btn-primary">💾 Save</button>
+                    <button id="cancelBtn" class="btn">✕ Cancel</button>
+                </div>
+            </div>
+            <textarea id="contentInput" placeholder="Write your markdown content here..."></textarea>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <div class="modal-actions">
+                <button id="modalConfirm" class="btn btn-danger">Confirm</button>
+                <button id="modalCancel" class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
